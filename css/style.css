@@ -23,6 +23,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 5;
   }
   .topo h1,
   .topo p {
@@ -70,6 +71,38 @@
     display: flex;
     margin-right: 18px;
     margin-bottom: 10px;
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .secao_opcoes_container ion-icon {
+    display: none;
+  }
+
+  /* Seção da borda verde ao ser clicado */
+  .borda_verde {
+    box-sizing: border-box;
+    border: 6px solid #32b72f;
+  }
+
+  .borda_verde .prato {
+    margin: 12px 8px 8px 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .borda_verde .prato {
+    position: relative;
+  }
+
+  .borda_verde ion-icon {
+    display: flex;
+    color: #32b72f;
+    font-size: 19px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
   }
 
   .prato {
@@ -137,5 +170,9 @@
     line-height: 23.44px;
     letter-spacing: 0.018em;
     margin: 0 60px;
+  }
+
+  .deixa_verde {
+    background-color: #32b72f;
   }
 }
