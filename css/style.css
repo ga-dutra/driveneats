@@ -1,178 +1,177 @@
-@media (min-width: 600px) {
-  body {
-    display: none;
-  }
+body {
+  background: #e5e5e5;
+  margin-left: 19px;
+  font-family: "Roboto", cursive;
 }
 
-@media (max-width: 600px) {
-  body {
-    background: #e5e5e5;
-    margin-left: 19px;
-    font-family: "Roboto", cursive;
-  }
+.topo {
+  background-color: #cf2b2b;
+  width: 100%;
+  height: 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.topo h1,
+.topo p {
+  color: #ffffff;
+  font-weight: 300;
+  margin-left: 21px;
+}
 
-  .topo {
-    background-color: #cf2b2b;
-    width: 100%;
-    height: 92px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 5;
-  }
-  .topo h1,
-  .topo p {
-    color: #ffffff;
-    font-weight: 300;
-    margin-left: 21px;
-  }
+.topo h1 {
+  font-family: "Righteous", cursive;
+  font-size: 44px;
+}
 
-  .topo h1 {
-    font-family: "Righteous", cursive;
-    font-size: 44px;
-  }
+.topo p {
+  font-style: normal;
+  font-size: 18px;
+}
 
-  .topo p {
-    font-style: normal;
-    font-size: 18px;
-  }
+.conteudo {
+  margin-top: calc(96px + 31px);
+  margin-bottom: calc(86px + 31px);
+}
 
-  .conteudo {
-    margin-top: calc(96px + 31px);
-    margin-bottom: calc(86px + 31px);
-  }
+.secao_titulo > h2 {
+  font-family: "Righteous", cursive;
+  font-weight: 400;
+  font-size: 26px;
+  color: #333333;
+  margin-bottom: 15px;
+}
 
-  .secao_titulo > h2 {
-    font-family: "Righteous", cursive;
-    font-weight: 400;
-    font-size: 26px;
-    color: #333333;
-    margin-bottom: 15px;
-  }
+.secao_opcoes {
+  display: flex;
+  width: auto;
+  overflow-x: scroll;
+  overscroll-behavior-inline: contain;
+  margin-bottom: 24px;
+}
 
-  .secao_opcoes {
-    display: flex;
-    width: auto;
-    overflow-x: scroll;
-    overscroll-behavior-inline: contain;
-    margin-bottom: 24px;
-  }
+.secao_opcoes_container {
+  width: 172px;
+  height: 216px;
+  background-color: #ffffff;
+  border-radius: 9px;
+  display: flex;
+  margin-right: 18px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px rgba(0, 0, 0, 0.25);
+}
 
-  .secao_opcoes_container {
-    width: 172px;
-    height: 216px;
-    background-color: #ffffff;
-    border-radius: 9px;
-    display: flex;
-    margin-right: 18px;
-    margin-bottom: 10px;
-    box-shadow: 0px 0px rgba(0, 0, 0, 0.25);
-  }
+.secao_opcoes_container ion-icon {
+  display: none;
+}
 
-  .secao_opcoes_container ion-icon {
-    display: none;
-  }
+/* Seção da borda verde ao ser clicado */
+.borda_verde {
+  box-sizing: border-box;
+  border: 6px solid #32b72f;
+}
 
-  /* Seção da borda verde ao ser clicado */
-  .borda_verde {
-    box-sizing: border-box;
-    border: 6px solid #32b72f;
-  }
+.borda_verde .prato {
+  margin: 12px 8px 8px 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
 
-  .borda_verde .prato {
-    margin: 12px 8px 8px 7px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
+.borda_verde .prato {
+  position: relative;
+}
 
-  .borda_verde .prato {
-    position: relative;
-  }
+.borda_verde ion-icon {
+  display: flex;
+  color: #32b72f;
+  font-size: 19px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
 
-  .borda_verde ion-icon {
-    display: flex;
-    color: #32b72f;
-    font-size: 19px;
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-  }
+.prato {
+  margin: 18px 14px 14px 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
 
-  .prato {
-    margin: 18px 14px 14px 13px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
+.secao_opcoes h2 {
+  font-weight: 700;
+  font-size: 16px;
+  color: #333333;
+  line-height: 19px;
+  width: 110%;
+}
+.secao_opcoes h3 {
+  font-weight: 300;
+  font-size: 15px;
+  color: #a6a6a6;
+  line-height: 18px;
+}
+.secao_opcoes h4 {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  line-height: 19px;
+}
 
-  .secao_opcoes h2 {
-    font-weight: 700;
-    font-size: 16px;
-    color: #333333;
-    line-height: 19px;
-    width: 110%;
-  }
-  .secao_opcoes h3 {
-    font-weight: 300;
-    font-size: 15px;
-    color: #a6a6a6;
-    line-height: 18px;
-  }
-  .secao_opcoes h4 {
-    font-weight: 400;
-    font-size: 16px;
-    color: #000000;
-    line-height: 19px;
-  }
+.prato img {
+  object-fit: cover;
+  width: 144px;
+  height: 87px;
+  border-radius: 4px;
+}
 
-  .prato img {
-    object-fit: cover;
-    width: 144px;
-    height: 87px;
-    border-radius: 4px;
-  }
+.final {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 86px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .final {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 86px;
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+button {
+  width: 364px;
+  height: 61px;
+  border: rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  background-color: #cbcbcb;
+  text-align: center;
+}
 
-  button {
-    width: 364px;
-    height: 61px;
-    border: rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
-    background-color: #cbcbcb;
-    text-align: center;
-  }
+.final span {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 23.44px;
+  letter-spacing: 0.018em;
+  margin: 0 60px;
+}
 
-  .final span {
-    display: block;
-    text-align: center;
-    font-size: 20px;
-    color: #ffffff;
-    font-weight: 400;
-    line-height: 23.44px;
-    letter-spacing: 0.018em;
-    margin: 0 60px;
-  }
+.deixa_verde {
+  background-color: #32b72f;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
 
-  .deixa_verde {
-    background-color: #32b72f;
-  }
+.deixa_verde:hover {
+  background-color: red; /* Green */
+  color: white;
 }

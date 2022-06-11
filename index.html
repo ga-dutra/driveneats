@@ -23,7 +23,7 @@
       <h2>Primeiro, seu prato</h2>
     </div>
     <div class="secao_opcoes">
-      <div onclick="selecionaItemP1()" class="secao_opcoes_container p1">
+      <div onclick="selecionaPrato(this)" class="secao_opcoes_container prato_principal">
         <div class="prato">
           <img src="/imagens/parmegiana-de-frango.jpg" alt="Prato de Parmegiana de Frango">
           <h2>Frango Parmegiana</h2>
@@ -32,7 +32,7 @@
           <ion-icon name="checkmark-circle"></ion-icon>
         </div>
       </div>
-      <div onclick="selecionaItemP2()" class="secao_opcoes_container p2">
+      <div onclick="selecionaPrato(this)" class="secao_opcoes_container prato_principal">
         <div class=" prato">
           <img src="/imagens/feijoada.jpg" alt="Prato de feijoada">
           <h2>Feijoada da Leila</h2>
@@ -41,7 +41,7 @@
           <ion-icon name="checkmark-circle"></ion-icon>
         </div>
       </div>
-      <div onclick="selecionaItemP3()" class="secao_opcoes_container p3">
+      <div onclick="selecionaPrato(this)" class="secao_opcoes_container prato_principal">
         <div class="prato">
           <img src="/imagens/frango_yin_yang 1.svg" alt="Prato de Frango Yin Yang">
           <h2>Frango Yin Yang</h2>
@@ -51,7 +51,7 @@
           <h4>R$ 20,90</h4>
         </div>
       </div>
-      <div onclick="selecionaItemP4()" class="secao_opcoes_container p4">
+      <div onclick="selecionaPrato(this)" class="secao_opcoes_container prato_principal">
         <div class="prato">
           <img src="/imagens/receitas-de-risoto-de-queijo.webp" alt="Prato de Risoto">
           <h2>Risoto de queijo</h2>
@@ -65,8 +65,8 @@
     <div class="secao_titulo">
       <h2>Agora, sua bebida</h2>
     </div>
-    <div class="secao_opcoes">
-      <div onclick="selecionaItemB1()" class="secao_opcoes_container b1">
+    <div class="secao_opcoes bebida">
+      <div onclick="selecionaBebida(this)" class="secao_opcoes_container bebida">
         <div class="prato">
           <img src="/imagens/suco-laranja4.jpg" alt="Suco de Laranja">
           <h2>Suco de Laranja</h2>
@@ -76,7 +76,7 @@
           <h4>R$ 6,90</h4>
         </div>
       </div>
-      <div onclick="selecionaItemB2()" class="secao_opcoes_container b2">
+      <div onclick="selecionaBebida(this)" class="secao_opcoes_container bebida">
         <div class="prato">
           <img src="/imagens/suco-uva4.jpg" alt="Suco de uva e maçã">
           <h2>Suco de Uva e Maçã</h2>
@@ -86,7 +86,7 @@
           <ion-icon name="checkmark-circle"></ion-icon>
         </div>
       </div>
-      <div onclick="selecionaItemB3()" class="secao_opcoes_container b3">
+      <div onclick="selecionaBebida(this)" class="secao_opcoes_container bebida">
         <div class="prato">
           <img src="/imagens/agua-mineral2.jpg" alt="Garrafa de água">
           <h2>Água Mineral</h2>
@@ -96,7 +96,7 @@
           <h4>R$ 3,50</h4>
         </div>
       </div>
-      <div onclick="selecionaItemB4()" class="secao_opcoes_container b4">
+      <div onclick="selecionaBebida(this)" class="secao_opcoes_container bebida">
         <div class="prato">
           <img src="/imagens/coca-cola2.jpg" alt="Lata de coca-cola">
           <h2>Coca-Cola 350ml</h2>
@@ -110,8 +110,8 @@
     <div class="secao_titulo">
       <h2>Por fim, sua sobremesa</h2>
     </div>
-    <div class="secao_opcoes">
-      <div onclick="selecionaItemS1()" class="secao_opcoes_container s1">
+    <div class="secao_opcoes sobremesa">
+      <div onclick="selecionaSobremesa(this)" class="secao_opcoes_container sobremesa">
         <div class="prato">
           <img src="/imagens/bolo-chocolate.webp" alt="Bolo de Chocolate">
           <h2>Bolo de chocolate</h2>
@@ -121,7 +121,7 @@
           <h4>R$ 9,90</h4>
         </div>
       </div>
-      <div onclick="selecionaItemS2()" class="secao_opcoes_container s2">
+      <div onclick="selecionaSobremesa(this)" class="secao_opcoes_container sobremesa">
         <div class="prato">
           <img src="/imagens/milkshake.jpg" alt="Milk-shake de morango">
           <h2>Milkshake de morango</h2>
@@ -130,7 +130,7 @@
           <ion-icon name="checkmark-circle"></ion-icon>
         </div>
       </div>
-      <div onclick="selecionaItemS3()" class="secao_opcoes_container s3">
+      <div onclick="selecionaSobremesa(this)" class="secao_opcoes_container sobremesa">
         <div class="prato">
           <img src="/imagens/bananasplit.jpg" alt="Banana split">
           <h2>Banana split</h2>
@@ -139,7 +139,7 @@
           <ion-icon name="checkmark-circle"></ion-icon>
         </div>
       </div>
-      <div onclick="selecionaItemS4()" class="secao_opcoes_container s4">
+      <div onclick="selecionaSobremesa(this)" class="secao_opcoes_container sobremesa">
         <div class="prato">
           <img src="/imagens/torta holandesa.jpg" alt="Torta Holandesa">
           <h2>Torta holandesa</h2>
@@ -152,7 +152,7 @@
     </div>
   </div>
   <div class="final">
-    <button> <span> Selecione os 3 itens para fechar o pedido</span></button>
+    <button onclick="enviaPedido()"> <span> Selecione os 3 itens para fechar o pedido</span></button>
   </div>
   <script src="/scripts.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
