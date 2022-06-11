@@ -1,4 +1,27 @@
 let contador = 0;
+let pratoPrincipal = "";
+let bebida = "";
+let sobremesa = "";
+let valorPratoPrincipal = 0;
+let valorbebida = 0;
+let valorsobremesa = 0;
+
+function virgulaParaPonto(a) {
+  // Transforma vírgula em ponto na string
+  if (a.length === 5) {
+    let novoPreco = a.substring(0, 2) + "." + a.substring(3);
+    return novoPreco;
+  } else if (a.length === 4) {
+    let novoPreco = a.substring(0, 1) + "." + a.substring(2);
+    return novoPreco;
+  }
+}
+
+function pontoParaVirgula(a) {
+  // Transforma ponto em vírgula na string
+  let novoPreco = a.substring(0, 2) + "," + a.substring(3);
+  return novoPreco;
+}
 
 function selecionaPrato(elemento) {
   // 1. Verifica se o botão já foi clicado. Nesse caso, a borda é removida
@@ -20,6 +43,16 @@ function selecionaPrato(elemento) {
     contador++;
     fecharPedido();
   }
+  // Obtém o nome do prato principal
+  let pratoPrincipal_aux = document.querySelector(
+    ".prato_principal.borda_verde h2"
+  ).innerHTML;
+  pratoPrincipal = pratoPrincipal_aux;
+  // Obtém o valor do prato principal
+  pratoPrincipal_aux = String(
+    document.querySelector(".prato_principal.borda_verde span").innerHTML
+  );
+  valorPratoPrincipal = virgulaParaPonto(pratoPrincipal_aux);
 }
 
 function selecionaBebida(elemento) {
@@ -38,6 +71,14 @@ function selecionaBebida(elemento) {
     contador++;
     fecharPedido();
   }
+  // Obtém a bebida selecionada
+  let bebida_aux = document.querySelector(".bebida.borda_verde h2").innerHTML;
+  bebida = bebida_aux;
+  // Obtém o valor da bebida
+  bebida_aux = String(
+    document.querySelector(".bebida.borda_verde span").innerHTML
+  );
+  valorbebida = virgulaParaPonto(bebida_aux);
 }
 function selecionaSobremesa(elemento) {
   const verificaSobremesa = document.querySelector(".sobremesa.borda_verde");
@@ -55,6 +96,16 @@ function selecionaSobremesa(elemento) {
     contador++;
     fecharPedido();
   }
+  // Obtém a sobremesa selecionada
+  let sobremesa_aux = document.querySelector(
+    ".sobremesa.borda_verde h2"
+  ).innerHTML;
+  sobremesa = sobremesa_aux;
+  // Obtém o valor da sobremesa
+  sobremesa_aux = String(
+    document.querySelector(".sobremesa.borda_verde span").innerHTML
+  );
+  valorsobremesa = virgulaParaPonto(sobremesa_aux);
 }
 
 function fecharPedido() {
@@ -63,18 +114,29 @@ function fecharPedido() {
   if (contador === 3) {
     texto_final.innerHTML = "Fechar pedido";
     deixa_verde.classList.add("deixa_verde");
+    document.querySelector("a").classList.remove("desabilitado");
   }
   if (contador !== 3) {
     deixa_verde.classList.remove("deixa_verde");
     texto_final.innerHTML = "Selecione os 3 itens para fechar o pedido";
+    document.querySelector("a").classList.add("desabilitado");
   }
 }
 
 function enviaPedido() {
-  if (contador !== 3) {
-    alert("Por favor, selecione 1 prato, 1 bebida e 1 sobremesa");
-  }
   if (contador === 3) {
-    alert("Vamos enviar o pedido ao restaurante!");
+    let valorTotal = pontoParaVirgula(
+      (
+        Number(valorPratoPrincipal) +
+        Number(valorbebida) +
+        Number(valorsobremesa)
+      ).toFixed(2)
+    );
+    let mensagem = `Olá, gostaria de fazer o pedido:\n- Prato: ${pratoPrincipal}\n- Bebida: ${bebida}\n- Sobremesa: ${sobremesa}\nTotal: R$ ${valorTotal}`;
+    const mensagemURL = encodeURIComponent(mensagem);
+    const url = "https://wa.me/5514998424737?text=";
+    let b = (document.querySelector(
+      ".link_whats"
+    ).href = `${url}${mensagemURL}`);
   }
 }

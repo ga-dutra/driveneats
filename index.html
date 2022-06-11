@@ -28,7 +28,7 @@
           <img src="/imagens/parmegiana-de-frango.jpg" alt="Prato de Parmegiana de Frango">
           <h2>Frango Parmegiana</h2>
           <h3>Acompanha arroz, salada e batata </h3>
-          <h4>R$ 22,90</h4>
+          <h4>R$ <span>22,90</span></h4>
           <ion-icon name="checkmark-circle"></ion-icon>
         </div>
       </div>
@@ -37,7 +37,7 @@
           <img src="/imagens/feijoada.jpg" alt="Prato de feijoada">
           <h2>Feijoada da Leila</h2>
           <h3>Acompanha arroz, farofa e couve </h3>
-          <h4>R$ 24,90</h4>
+          <h4>R$ <span>24,90</span></h4>
           <ion-icon name="checkmark-circle"></ion-icon>
         </div>
       </div>
@@ -48,7 +48,7 @@
           <h3>Acompanha sal
             <ion-icon name="checkmark-circle"></ion-icon>ada e batata frita
           </h3>
-          <h4>R$ 20,90</h4>
+          <h4>R$ <span>20,90</span></h4>
         </div>
       </div>
       <div onclick="selecionaPrato(this)" class="secao_opcoes_container prato_principal">
@@ -58,7 +58,7 @@
           <h3>Risoto de que
             <ion-icon name="checkmark-circle"></ion-icon>ijo brie e alho poró
           </h3>
-          <h4>R$ 23,90</h4>
+          <h4>R$ <span>23,90</span></h4>
         </div>
       </div>
     </div>
@@ -73,7 +73,7 @@
           <h3>Suco de Laran
             <ion-icon name="checkmark-circle"></ion-icon>ja Natural One 300ml
           </h3>
-          <h4>R$ 6,90</h4>
+          <h4>R$ <span>6,90</span></h4>
         </div>
       </div>
       <div onclick="selecionaBebida(this)" class="secao_opcoes_container bebida">
@@ -81,7 +81,7 @@
           <img src="/imagens/suco-uva4.jpg" alt="Suco de uva e maçã">
           <h2>Suco de Uva e Maçã</h2>
           <h3>Suco de Uva e Maçã Natural One 300ml</h3>
-          <h4>R$ 6,90</h4>
+          <h4>R$ <span>6,90</span></h4>
 
           <ion-icon name="checkmark-circle"></ion-icon>
         </div>
@@ -93,7 +93,7 @@
           <h3>Água mineral
             <ion-icon name="checkmark-circle"></ion-icon>Cristal sem gás 350ml
           </h3>
-          <h4>R$ 3,50</h4>
+          <h4>R$ <span>3,50</span></h4>
         </div>
       </div>
       <div onclick="selecionaBebida(this)" class="secao_opcoes_container bebida">
@@ -101,7 +101,7 @@
           <img src="/imagens/coca-cola2.jpg" alt="Lata de coca-cola">
           <h2>Coca-Cola 350ml</h2>
           <h3>Coca-Cola 350ml</h3>
-          <h4>R$ 5,90</h4>
+          <h4>R$ <span>5,90</span></h4>
 
           <ion-icon name="checkmark-circle"></ion-icon>
         </div>
@@ -114,45 +114,45 @@
       <div onclick="selecionaSobremesa(this)" class="secao_opcoes_container sobremesa">
         <div class="prato">
           <img src="/imagens/bolo-chocolate.webp" alt="Bolo de Chocolate">
-          <h2>Bolo de chocolate</h2>
+          <h2>Bolo de Chocolate</h2>
           <h3>Fatia de 150
             <ion-icon name="checkmark-circle"></ion-icon>gramas
           </h3>
-          <h4>R$ 9,90</h4>
+          <h4>R$ <span>9,90</span></h4>
         </div>
       </div>
       <div onclick="selecionaSobremesa(this)" class="secao_opcoes_container sobremesa">
         <div class="prato">
           <img src="/imagens/milkshake.jpg" alt="Milk-shake de morango">
-          <h2>Milkshake de morango</h2>
+          <h2>Milkshake de Morango</h2>
           <h3>300 ml</h3>
-          <h4>R$ 13,90</h4>
+          <h4>R$ <span>13,90</span></h4>
           <ion-icon name="checkmark-circle"></ion-icon>
         </div>
       </div>
       <div onclick="selecionaSobremesa(this)" class="secao_opcoes_container sobremesa">
         <div class="prato">
           <img src="/imagens/bananasplit.jpg" alt="Banana split">
-          <h2>Banana split</h2>
+          <h2>Banana Split</h2>
           <h3>Acompanha 3 bolas de sorvete napolitano</h3>
-          <h4>R$ 19,90</h4>
+          <h4>R$ <span>19,90</span></h4>
           <ion-icon name="checkmark-circle"></ion-icon>
         </div>
       </div>
       <div onclick="selecionaSobremesa(this)" class="secao_opcoes_container sobremesa">
         <div class="prato">
           <img src="/imagens/torta holandesa.jpg" alt="Torta Holandesa">
-          <h2>Torta holandesa</h2>
+          <h2>Torta Holandesa</h2>
           <h3>Fatia de 150
             <ion-icon name="checkmark-circle"></ion-icon>gramas
           </h3>
-          <h4>R$ 10,90</h4>
+          <h4>R$ <span>10,90</span></h4>
         </div>
       </div>
     </div>
   </div>
-  <div class="final">
-    <button onclick="enviaPedido()"> <span> Selecione os 3 itens para fechar o pedido</span></button>
+  <div class="final"> <a onclick="enviaPedido()" class="link_whats desabilitado" href="" target="_blank">
+      <button> <span> Selecione os 3 itens para fechar o pedido</span></button></a>
   </div>
   <script src="/scripts.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

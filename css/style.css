@@ -37,7 +37,7 @@ body {
 
 .conteudo {
   margin-top: calc(96px + 31px);
-  margin-bottom: calc(86px + 31px);
+  margin-bottom: calc(80px + 31px);
 }
 
 .secao_titulo > h2 {
@@ -172,6 +172,12 @@ button {
 }
 
 .deixa_verde:hover {
-  background-color: red; /* Green */
-  color: white;
+  background-color: hwb(119 7% 62% / 0.87);
+}
+
+.desabilitado {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: black;
 }
