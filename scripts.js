@@ -19,8 +19,13 @@ function virgulaParaPonto(a) {
 
 function pontoParaVirgula(a) {
   // Transforma ponto em vírgula na string
-  let novoPreco = a.substring(0, 2) + "," + a.substring(3);
-  return novoPreco;
+  if (a.length === 5) {
+    let novoPreco = a.substring(0, 2) + "," + a.substring(3);
+    return novoPreco;
+  } else if (a.length === 4) {
+    let novoPreco = a.substring(0, 1) + "," + a.substring(2);
+    return novoPreco;
+  }
 }
 
 function selecionaPrato(elemento) {
@@ -132,11 +137,39 @@ function enviaPedido() {
         Number(valorsobremesa)
       ).toFixed(2)
     );
-    let mensagem = `Olá, gostaria de fazer o pedido:\n- Prato: ${pratoPrincipal}\n- Bebida: ${bebida}\n- Sobremesa: ${sobremesa}\nTotal: R$ ${valorTotal}`;
+    const nome = prompt("Por favor, digite seu nome:");
+    const endereço = prompt("Por favor, digite seu endereço:");
+    const mensagem = `Olá, gostaria de fazer o pedido:\n- Prato: ${pratoPrincipal}\n- Bebida: ${bebida}\n- Sobremesa: ${sobremesa}\nTotal: R$ ${valorTotal}\n\nNome: ${nome}\nEndereço: ${endereço}`;
     const mensagemURL = encodeURIComponent(mensagem);
     const url = "https://wa.me/5514998424737?text=";
     let b = (document.querySelector(
       ".link_whats"
     ).href = `${url}${mensagemURL}`);
   }
+}
+
+function confirmaPedido() {
+  document.querySelector(".topo").classList.add("deixa_embacado");
+  document.querySelector(".conteudo").classList.add("deixa_embacado");
+  document.querySelector(".final").classList.add("deixa_embacado");
+  document.querySelector(".fechar_pedido").classList.add("deixa_inclicavel");
+  document
+    .querySelector(".secao_confirma_pedido")
+    .classList.remove("escondido");
+  document.querySelector(".esquerda.Prato").innerHTML = pratoPrincipal;
+  document.querySelector(".esquerda.Bebida").innerHTML = bebida;
+  document.querySelector(".esquerda.Sobremesa").innerHTML = sobremesa;
+  document.querySelector(".direita.v1").innerHTML =
+    pontoParaVirgula(valorPratoPrincipal);
+  document.querySelector(".direita.v2").innerHTML =
+    pontoParaVirgula(valorbebida);
+  document.querySelector(".direita.v3").innerHTML =
+    pontoParaVirgula(valorsobremesa);
+  document.querySelector(".direita.last").innerHTML = pontoParaVirgula(
+    (
+      Number(valorPratoPrincipal) +
+      Number(valorbebida) +
+      Number(valorsobremesa)
+    ).toFixed(2)
+  );
 }

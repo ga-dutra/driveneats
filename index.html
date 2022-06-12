@@ -27,7 +27,7 @@
         <div class="prato">
           <img src="/imagens/parmegiana-de-frango.jpg" alt="Prato de Parmegiana de Frango">
           <h2>Frango Parmegiana</h2>
-          <h3>Acompanha arroz, salada e batata </h3>
+          <h3>Acompanha arroz, salada e batata</h3>
           <h4>R$ <span>22,90</span></h4>
           <ion-icon name="checkmark-circle"></ion-icon>
         </div>
@@ -36,7 +36,7 @@
         <div class=" prato">
           <img src="/imagens/feijoada.jpg" alt="Prato de feijoada">
           <h2>Feijoada da Leila</h2>
-          <h3>Acompanha arroz, farofa e couve </h3>
+          <h3>Acompanha arroz, farofa e couve</h3>
           <h4>R$ <span>24,90</span></h4>
           <ion-icon name="checkmark-circle"></ion-icon>
         </div>
@@ -45,8 +45,8 @@
         <div class="prato">
           <img src="/imagens/frango_yin_yang 1.svg" alt="Prato de Frango Yin Yang">
           <h2>Frango Yin Yang</h2>
-          <h3>Acompanha sal
-            <ion-icon name="checkmark-circle"></ion-icon>ada e batata frita
+          <h3>Acompanha salada e batata frita
+            <ion-icon name="checkmark-circle"></ion-icon>
           </h3>
           <h4>R$ <span>20,90</span></h4>
         </div>
@@ -55,8 +55,8 @@
         <div class="prato">
           <img src="/imagens/receitas-de-risoto-de-queijo.webp" alt="Prato de Risoto">
           <h2>Risoto de queijo</h2>
-          <h3>Risoto de que
-            <ion-icon name="checkmark-circle"></ion-icon>ijo brie e alho poró
+          <h3>Risoto de queijo brie e alho poró
+            <ion-icon name="checkmark-circle"></ion-icon>
           </h3>
           <h4>R$ <span>23,90</span></h4>
         </div>
@@ -70,8 +70,8 @@
         <div class="prato">
           <img src="/imagens/suco-laranja4.jpg" alt="Suco de Laranja">
           <h2>Suco de Laranja</h2>
-          <h3>Suco de Laran
-            <ion-icon name="checkmark-circle"></ion-icon>ja Natural One 300ml
+          <h3>Suco de Laranja Natural One 300ml
+            <ion-icon name="checkmark-circle"></ion-icon>
           </h3>
           <h4>R$ <span>6,90</span></h4>
         </div>
@@ -90,8 +90,8 @@
         <div class="prato">
           <img src="/imagens/agua-mineral2.jpg" alt="Garrafa de água">
           <h2>Água Mineral</h2>
-          <h3>Água mineral
-            <ion-icon name="checkmark-circle"></ion-icon>Cristal sem gás 350ml
+          <h3>Água mineral Cristal sem gás 350ml
+            <ion-icon name="checkmark-circle"></ion-icon>
           </h3>
           <h4>R$ <span>3,50</span></h4>
         </div>
@@ -115,8 +115,8 @@
         <div class="prato">
           <img src="/imagens/bolo-chocolate.webp" alt="Bolo de Chocolate">
           <h2>Bolo de Chocolate</h2>
-          <h3>Fatia de 150
-            <ion-icon name="checkmark-circle"></ion-icon>gramas
+          <h3>Fatia de 150gramas
+            <ion-icon name="checkmark-circle"></ion-icon>
           </h3>
           <h4>R$ <span>9,90</span></h4>
         </div>
@@ -151,9 +151,28 @@
       </div>
     </div>
   </div>
-  <div class="final"> <a onclick="enviaPedido()" class="link_whats desabilitado" href="" target="_blank">
-      <button> <span> Selecione os 3 itens para fechar o pedido</span></button></a>
+  <div class="final">
+    <!-- <a onclick="enviaPedido()" class="link_whats desabilitado" href="" target="_blank"> -->
+    <button onclick="confirmaPedido();" class=" fechar_pedido"> <span> Selecione os 3 itens para fechar o pedido</span></button>
+    <!-- </a> -->
   </div>
+
+  <div class="secao_confirma_pedido escondido">
+    <p>Confirme seu pedido</p>
+    <div class="itens_confirmaveis">
+      <div>
+        <span class="esquerda Prato">a</span><span class="direita v1">a</span>
+      </div>
+      <div><span class="esquerda Bebida">b</span><span class="direita v2">a</span></div>
+      <div><span class="esquerda Sobremesa">c</span><span class="direita v3">a</span></div>
+      <div><span class="esquerda last">TOTAL</span><span class="direita last">a</span></div>
+    </div>
+    <a class="link_whats" onclick="enviaPedido()" ; href="">
+      <button class="botao_final">Tudo certo, pode pedir!</button>
+    </a>
+    <p> <a href="/">Cancelar</a></p>
+  </div>
+
   <script src="/scripts.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

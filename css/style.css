@@ -36,8 +36,8 @@ body {
 }
 
 .conteudo {
-  margin-top: calc(96px + 31px);
-  margin-bottom: calc(80px + 31px);
+  margin-top: 127px; /* 96px + 31px */
+  margin-bottom: 111px; /* 80px + 31px */
 }
 
 .secao_titulo > h2 {
@@ -64,7 +64,7 @@ body {
   display: flex;
   margin-right: 18px;
   margin-bottom: 10px;
-  box-shadow: 0px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0.25px 0.25px rgba(0, 0, 0, 0.05);
 }
 
 .secao_opcoes_container ion-icon {
@@ -145,7 +145,7 @@ body {
   justify-content: center;
 }
 
-button {
+.fechar_pedido {
   width: 364px;
   height: 61px;
   border: rgba(0, 0, 0, 0.25);
@@ -175,9 +175,96 @@ button {
   background-color: hwb(119 7% 62% / 0.87);
 }
 
-.desabilitado {
-  pointer-events: none;
-  cursor: default;
+/* Deixa o body embaçado */
+.deixa_embacado {
+  opacity: 0.1;
+}
+
+/* Bônus - seção para confirmar o pedido */
+.secao_confirma_pedido {
+  opacity: 0.99;
+  position: absolute;
+  z-index: 8;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -85%);
+  width: 377px;
+  height: 353px;
+  background-color: #50d074;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25);
+}
+
+.secao_confirma_pedido > p {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  font-style: bold;
+}
+
+p a {
+  font-size: 21px;
+  letter-spacing: 1.8%;
+}
+
+a {
   text-decoration: none;
-  color: black;
+  color: #ffffff;
+}
+
+.botao_final:hover {
+  cursor: pointer;
+}
+
+.itens_confirmaveis {
+  width: 84%;
+  height: 42%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+
+.itens_confirmaveis span {
+  font-weight: 300;
+  font-size: 22px;
+  color: #ffffff;
+  letter-spacing: 1.8%;
+}
+
+div .last {
+  font-style: bold;
+  font-weight: 500;
+}
+
+div .esquerda {
+  left: 0;
+}
+
+div .direita {
+  position: absolute;
+  right: 0;
+}
+
+.botao_final {
+  width: 325px;
+  height: 52px;
+  border-radius: 100px;
+
+  border: 0px;
+  color: #50d074;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.escondido {
+  display: none;
+}
+
+.deixa_inclicavel {
+  pointer-events: none;
 }
