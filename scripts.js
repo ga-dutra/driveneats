@@ -120,11 +120,13 @@ function fecharPedido() {
     texto_final.innerHTML = "Fechar pedido";
     deixa_verde.classList.add("deixa_verde");
     document.querySelector("a").classList.remove("desabilitado");
+    document.querySelector(".deixa_verde").classList.remove("deixa_inclicavel");
   }
   if (contador !== 3) {
     deixa_verde.classList.remove("deixa_verde");
     texto_final.innerHTML = "Selecione os 3 itens para fechar o pedido";
     document.querySelector("a").classList.add("desabilitado");
+    document.querySelector(".fechar_pedido").classList.add("deixa_inclicavel");
   }
 }
 
