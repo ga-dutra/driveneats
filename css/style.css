@@ -268,7 +268,3 @@ div .direita {
 .deixa_inclicavel {
   pointer-events: none;
 }
-
-.desabilitado {
-  cursor: not-allowed;
-}
