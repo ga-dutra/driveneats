@@ -268,3 +268,7 @@ div .direita {
 .deixa_inclicavel {
   pointer-events: none;
 }
+
+.botao_cancelar {
+  cursor: pointer;
+}

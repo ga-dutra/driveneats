@@ -175,3 +175,7 @@ function confirmaPedido() {
     ).toFixed(2)
   );
 }
+
+function recarregaPagina() {
+  window.location.reload();
+}
